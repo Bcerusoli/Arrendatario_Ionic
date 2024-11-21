@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Reservas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let reservation of reservations">
+      
+      <ion-thumbnail slot="start" *ngIf="place && place.fotos && place.fotos.length > 0">
+        <img [src]="place.fotos[0]?.url" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ reservation.cliente?.nombrecompleto || 'Cliente desconocido' }}</h2>
+        <p>Noches: {{ calculateNights(reservation.fechaInicio, reservation.fechaFin) }}</p>
+        <p>Fecha de Llegada: {{ reservation.fechaInicio }}</p>
+        <p>Fecha de Salida: {{ reservation.fechaFin }}</p>
+        <p>Precio Total: {{ reservation.precioTotal }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

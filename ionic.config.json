@@ -1,0 +1,7 @@
+{
+  "name": "Arrendatario_Ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

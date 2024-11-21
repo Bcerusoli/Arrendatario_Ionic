@@ -1,0 +1,70 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Agregar Lugar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Descripción</ion-label>
+      <ion-input [(ngModel)]="descripcion"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Cantidad de Personas</ion-label>
+      <ion-input type="number" [(ngModel)]="cantPersonas"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Cantidad de Camas</ion-label>
+      <ion-input type="number" [(ngModel)]="cantCamas"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Cantidad de Baños</ion-label>
+      <ion-input type="number" [(ngModel)]="cantBanios"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Cantidad de Habitaciones</ion-label>
+      <ion-input type="number" [(ngModel)]="cantHabitaciones"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Tiene Wi-Fi</ion-label>
+      <ion-toggle [(ngModel)]="tieneWifi"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Cantidad de Vehículos en Parqueo</ion-label>
+      <ion-input type="number" [(ngModel)]="cantVehiculosParqueo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Precio por Noche</ion-label>
+      <ion-input [(ngModel)]="precioNoche"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Costo de Limpieza</ion-label>
+      <ion-input [(ngModel)]="costoLimpieza"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Ciudad</ion-label>
+      <ion-input [(ngModel)]="ciudad"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Latitud</ion-label>
+      <ion-input [(ngModel)]="latitud"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Longitud</ion-label>
+      <ion-input [(ngModel)]="longitud"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fotos</ion-label>
+      <input type="file" (change)="handleFileInput($event)" multiple accept="image/*" style="margin-top: 10px;">
+    </ion-item>
+    
+  </ion-list>
+
+  
+  <ion-button expand="full" (click)="handleAddPlace()">Guardar</ion-button>
+</ion-content>
